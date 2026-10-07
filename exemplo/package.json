@@ -1,0 +1,9 @@
+{
+  "name": "exemplo-seo-kit",
+  "private": true,
+  "description": "App Next mínimo que o CI builda com o pacote empacotado (npm pack) em Next 15 e 16.",
+  "type": "module",
+  "scripts": {
+    "build": "next build"
+  }
+}
