@@ -1,0 +1,59 @@
+{
+  "name": "@brk13/seo",
+  "version": "1.0.0",
+  "description": "SEO padrão para sites Next em português: metadata, JSON-LD, robots, sitemap, llms.txt, IndexNow e medição (GA4/Clarity).",
+  "license": "MIT",
+  "author": "BRK13",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BRK13/seo-kit.git"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./medicao": {
+      "types": "./dist/medicao.d.ts",
+      "import": "./dist/medicao.js"
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "import": "./dist/node.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18.18"
+  },
+  "scripts": {
+    "build": "node scripts/limpar-dist.mjs && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "next": ">=15",
+    "react": ">=18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "happy-dom": "^20.14.5",
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.3"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
