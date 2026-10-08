@@ -67,7 +67,7 @@ import { SITE } from "@/lib/site";
 export const metadata = seo({
   site: SITE,
   path: "/",
-  title: "Clínica Exemplo — fisioterapia em Brasília",
+  title: "Clínica Exemplo: fisioterapia em Brasília",
   description: "Fisioterapia, pilates e quiropraxia em Brasília, com avaliação individual.",
 });
 
